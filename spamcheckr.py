@@ -38,6 +38,8 @@ try:
             if to is None:
                 continue
             for addr in to.split(","):
+                if addr[0] == "<":
+                    addr = addr[1:-1]
                 if addr not in addrs:
                     count = 1
                 else:
